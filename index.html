@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cardápio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <button type="button" id="tema">🌙</button>
+
+        <h1>Cardápio</h1>
+
+        <p>Realize o seu pedido preenchendo os dados abaixo</p>
+
+        <form id="Cardapio">
+
+            <input 
+                list="pratos" 
+                id="prato" 
+                placeholder="Digite ou escolha o prato" 
+                required
+            >
+
+            <datalist id="pratos">
+                <option value="Pizza">
+                <option value="Hambúrguer">
+                <option value="Sushi">
+                <option value="Pastel">
+            </datalist>
+
+            <input 
+                type="text" 
+                id="cliente" 
+                placeholder="Cliente" 
+                required
+            >
+
+            <input 
+                type="text" 
+                id="endereco" 
+                placeholder="Endereço" 
+                required
+            >
+
+            <input 
+                type="text" 
+                id="telefone" 
+                placeholder="Telefone" 
+                required
+            >
+
+            <select id="pagamento" required>
+
+                <option value="">Forma de Pagamento</option>
+
+                <option value="Pix">Pix</option>
+
+                <option value="Cartão de Crédito">
+                    Cartão de Crédito
+                </option>
+
+                <option value="Cartão de Débito">
+                    Cartão de Débito
+                </option>
+
+                <option value="Dinheiro">
+                    Dinheiro
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Enviar
+            </button>
+
+            <button type="button" id="verPedidos">
+                Verificar pedidos
+            </button>
+
+        </form>
+
+        <div id="pedidos"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
